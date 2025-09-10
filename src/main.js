@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
+import { useStockStore } from './stores/stock.js';
 
 // Importa os estilos principais do projeto, incluindo as diretivas do Tailwind CSS.
 import './assets/style.css';
@@ -19,22 +20,6 @@ app.use(router);
 // Monta a aplicação no elemento <div id="app"> do index.html.
 app.mount('#app');
 
-
-
-
-/*
-import './assets/main.css'
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
-import App from './App.vue'
-import router from './router'
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
-*/
+// Inicializa a busca de produtos ao carregar a aplicação
+const store = useStockStore();
+store.fetchProducts();

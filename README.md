@@ -47,4 +47,20 @@ npm run build
 │   └── main.js                # Ponto de entrada da aplicação Vue
 └── package.json               # Configurações do projeto e dependências
 
+----------------------------------------------------------------------------------------------------
+
+A estrutura de pasta:
+
+/seu-projeto
+├── /frontend      (aqui fica todo o código Vue.js)
+│   ├── /src
+│   │   ├── ...
+│   │   └── main.js
+│   └── package.json
+└── /backend       (aqui fica o código do seu servidor Express)
+    ├── index.js
+    ├── db.js
+    ├── package.json
+    └── .gitignore
+
  */

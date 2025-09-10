@@ -1,4 +1,3 @@
-// router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import Dashboard from '@/components/Dashboard.vue';
 import ProductList from '@/components/ProductList.vue';

@@ -3,12 +3,7 @@
     <div class="container mx-auto p-4 sm:p-8">
       <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
         <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-4 sm:mb-0">Controle de Estoque</h1>
-        <button
-          @click="openModal(null)"
-          class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105"
-        >
-          + Adicionar Produto
-        </button>
+        
       </div>
 
       <ProductList @edit-product="openModal" />
