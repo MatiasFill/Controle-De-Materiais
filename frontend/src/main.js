@@ -3,6 +3,7 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
 import { useStockStore } from './stores/stock.js';
+import { useAuthStore } from './stores/auth.js'; // Importa a loja de autenticação
 
 // Importa os estilos principais do projeto, incluindo as diretivas do Tailwind CSS.
 import './assets/style.css';
@@ -21,5 +22,9 @@ app.use(router);
 app.mount('#app');
 
 // Inicializa a busca de produtos ao carregar a aplicação
-const store = useStockStore();
-store.fetchProducts();
+const stockStore = useStockStore();
+stockStore.fetchProducts();
+
+// Inicializa a loja de autenticação para verificar o token no localStorage
+const authStore = useAuthStore();
+authStore.initialize();
